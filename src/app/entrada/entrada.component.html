@@ -1,0 +1,111 @@
+<div class="centralizar" style="background-color: rgba(0, 0, 0, 0.26); height: 100vh; width: 100vw;">
+
+    <div class="modais">
+        <div (click)="fecharModal()" class="centralizar"
+            style="justify-content: end; margin-right: 12px; margin-top: 5px;">
+            X
+        </div>
+        <div class="centralizar">
+            <h2 style="color: #12474E;" *ngIf="this.tipo == 1">Entrada de Itens</h2>
+            <h2 style="color: #12474E;" *ngIf="this.tipo == 2">Entrada de Fios</h2>
+        </div>
+        <div class="centralizar">
+            <div class="linha"></div>
+        </div>
+        <div class="centralizar">
+            <div style="margin-right: 60px;">
+                <h6 *ngIf="this.tipo == 1">Produto</h6>
+                <h6 *ngIf="this.tipo == 2">Cliente</h6>
+                <div class="centralizar">
+                    <div class="ladoInput">
+                        <div style="margin-left: 15px; margin-top: 4px;">
+                            <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                        </div>
+                    </div>
+
+                    <input class="inputs" type="text" [(ngModel)]="nome">
+                </div>
+            </div>
+            <div>
+                <h6 style="margin-left: 40px;">Quantidade</h6>
+                <div class="centralizar">
+                    <h3 class="sinais" style="margin-left: 20px;" (click)="mudarQtd(1)">-</h3>
+                    <input class="quantidade" placeholder="" type="text" [(ngModel)]="quantidade">
+                    <h3 class="sinais" style="margin-left: 20px; font-size: 35px;" (click)="mudarQtd(2)">+</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="centralizar" style="margin-top: 5px;">
+            <div style="margin-right: 60px;">
+                <h6 *ngIf="this.tipo == 1">Fornecedor</h6>
+                <h6 *ngIf="this.tipo == 2">Peso</h6>
+                <div class="centralizar">
+                    <div class="ladoInput">
+                        <div style="margin-left: 15px; margin-top: 4px;">
+                            <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                        </div>
+                    </div>
+                    <input class="inputs" placeholder="" type="text" *ngIf="this.tipo == 1" [(ngModel)]="fornecedor">
+                    <input class="inputs" placeholder="" type="text" *ngIf="this.tipo == 2" [(ngModel)]="peso">
+                </div>
+            </div>
+            <div>
+                <h6 style="margin-left: 63px;">Valor</h6>
+                <div class="centralizar">
+                    <h3 class="sinais" style="margin-left: 20px;" (click)="mudarValor(1)">-</h3>
+                    <input class="quantidade" placeholder="" type="text" [(ngModel)]="valor">
+                    <h3 class="sinais" style="margin-left: 20px; font-size: 35px;" (click)="mudarValor(2)">+</h3>
+                </div>
+            </div>
+        </div>
+        <div class="centralizar" style="margin-top: 5px;" *ngIf="this.tipo == 1">
+            <div style="margin-left: 60px;">
+                <div style="margin-right: 60px;">
+                    <h6>Descrição</h6>
+                    <textarea class="Desc" [(ngModel)]="descricao"></textarea>
+                </div>
+
+            </div>
+        </div>
+        <div class="centralizar" style="margin-top: 10px; margin-bottom: 40px;" *ngIf="this.tipo == 2">
+            <div style="margin-right: 60px;">
+                <h6>Fornecedor</h6>
+                <div class="centralizar">
+                    <div class="ladoInput">
+                        <div style="margin-left: 15px; margin-top: 4px;">
+                            <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                        </div>
+                    </div>
+
+                    <input class="inputs" type="text" [(ngModel)]="fornecedor">
+                </div>
+            </div>
+            <div>
+                <h6 style="margin-left: 25px;">Rolos por caixa</h6>
+                <div class="centralizar">
+                    <h3 class="sinais" style="margin-left: 20px;" (click)="mudarRolos(1)">+</h3>
+                    <input class="quantidade" placeholder="" type="text" [(ngModel)]="rolosCaixa">
+                    <h3 class="sinais" style="margin-left: 20px; font-size: 35px;" (click)="mudarRolos(2)">-</h3>
+                </div>
+            </div>
+        </div>
+        <div class="centralizar" style="margin-top: 20px;">
+            <div>
+                <div class="centralizar">
+                    <h6>Nota Fiscal</h6>
+                </div>
+
+                <input class="notaFiscal" [(ngModel)]="notaFiscal">
+            </div>
+            <div>
+                <button class="nota" style="margin-left: 100px; margin-top: 25px;" (click)="entradaItens()">
+                    Enviar
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+</div>

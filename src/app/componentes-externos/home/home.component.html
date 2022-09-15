@@ -1,0 +1,101 @@
+<div class="container-content container">
+    <div class="container-title">
+        <h1 *ngIf="lista == 'tela-inicial'">Página Inicial</h1>
+        <h1 *ngIf="lista == 'fio'">Fios</h1>
+        <h1 *ngIf="lista == 'malha'">Malhas</h1>
+        <h1 *ngIf="lista == 'maquina'">Máquinas</h1>
+        <h1 *ngIf="lista == 'itens'">Itens</h1>
+    </div>
+    <div class="divOpcoes">
+        <div class="input">
+            <div class="input-icon">
+                <i class="bi bi-search"></i>
+            </div>
+            <input placeholder="Pesquisar" type="text" [(ngModel)]="textPesquisa" (keyup)="filtrar()">
+        </div>
+        <button class="entrada" *ngIf="lista == 'itens'" (click)="changeModalEntrada(1)">Entrada Itens</button>
+        <button class="entrada" *ngIf="lista == 'fio'" (click)="changeModalEntrada(2)">Entrada Fios</button>
+        <button class="cadastro" *ngIf="lista == 'fio'" (click)="changeModalCadastroFio()">Cadastro de Fio</button>
+        <button class="cadastro" *ngIf="lista == 'malha'" (click)="changeModalCadastroMalha()">Cadastro de
+            Malha</button>
+        <button class="cadastro" *ngIf="lista == 'maquina'" (click)="changeModalCadastroMaquina()">Cadastro de
+            Máquina</button>
+        <button class="cadastro" *ngIf="lista == 'itens'" (click)="changeModalCadastroItem()">Cadastro de Item</button>
+    </div>
+    <div class="mx-4 mt-2 d-flex justify-content-between">
+        <div class="d-flex mt-1" style="padding: 9px;    margin-left: 10px;
+        border: 1px solid black;">
+            <div class="d-flex" style="align-items: center; justify-content:center">
+                <span>Malha:</span>
+                <div class="m-2" style="background-color: #12474E; width:10px; height: 10px"></div>
+            </div>
+            <div class="d-flex" style="align-items: center; justify-content:center">
+                <span>Fio:</span>
+                <div class="m-2" style="background-color: #73C6A8; width:10px; height: 10px"></div>
+            </div>
+            <div class="d-flex" style="align-items: center; justify-content:center">
+                <span>Máquina:</span>
+                <div class="m-2" style="background-color: #0d533a; width:10px; height: 10px"></div>
+            </div>
+            <div class="d-flex" style="align-items: center; justify-content:center">
+                <span>Item:</span>
+                <div class="m-2" style="background-color: #00b472; width:10px; height: 10px"></div>
+            </div>
+        </div>
+            
+        <div class="d-flex" style="align-items: center;">
+            <div style="width: 30px;
+            cursor:pointer;
+            display: flex;
+            align-items: 25px;
+            height: 30px;
+            align-items: center;
+            justify-content: center;" [ngClass]="{'color-actived': !tipo_exibicao_bloco}" (click)="change_to_list()"
+                class="change-type-list me-2"><i class="bi bi-list" style="font-size:20px;"></i></div>
+            <div style="width: 30px;
+            cursor:pointer;
+            display: flex;
+            align-items: 25px;
+            height: 30px;
+            align-items: center;
+            justify-content: center;"  [ngClass]="{'color-actived': tipo_exibicao_bloco}" (click)="change_to_card()" class="change-type-list"><i
+                    class="bi bi-grid-3x3-gap-fill" style="font-size:20px;"></i></div>
+        </div>
+    </div>
+
+    <app-entrada [tipo]="tipoModalEntrada" (changeModal)="changeModalEntrada(1)" style="position: fixed; top:0;left:0"
+        *ngIf="stateEntrada"></app-entrada>
+    <app-cadastroFio (modalCadastroFio)="changeModalCadastroFio()" *ngIf="stateFio"
+        style="position: fixed; top:0;left:0"></app-cadastroFio>
+    <app-cadastroMalha (modalCadastroMalha)="changeModalCadastroMalha()" *ngIf="stateMalha"
+        style="position: fixed; top:0;left:0"></app-cadastroMalha>
+    <app-cadastroItem (modalCadastroItem)="changeModalCadastroItem()" *ngIf="stateItem"
+        style="position: fixed; top:0;left:0"></app-cadastroItem>
+    <app-cadastroMaquinas (modalCadastroMaquina)="changeModalCadastroMaquina()" *ngIf="stateMaquina"
+    style="position: fixed; top:0;left:0"></app-cadastroMaquinas>
+    <div>
+        <div [ngClass]="{'row': tipo_exibicao_bloco}" *ngIf="lista == 'tela-inicial'" class="container-fios row">
+            <app-malha [tipo_exibicao_bloco]="tipo_exibicao_bloco" *ngFor="let f of malhasFiltradas" class="col-md-3 col-sm-4" [malha]="f"></app-malha>
+            <app-maquina [tipo_exibicao_bloco]="tipo_exibicao_bloco" *ngFor="let f of maquinasFiltradas" class="col-md-3 col-sm-4" [maquina]="f"></app-maquina>
+            <app-fio [tipo_exibicao_bloco]="tipo_exibicao_bloco" *ngFor="let f of fiosFiltrados" class="col-md-3 col-sm-4" [fio]="f"></app-fio>
+            <app-itens [tipo_exibicao_bloco]="tipo_exibicao_bloco" *ngFor="let f of itensFiltrados" class="col-md-3 col-sm-4" [item]="f"></app-itens>
+        </div>
+
+        <div [ngClass]="{'row': tipo_exibicao_bloco}" *ngIf="lista == 'fio'" class="container-fios row">
+            <app-fio [tipo_exibicao_bloco]="tipo_exibicao_bloco" *ngFor="let f of fiosFiltrados" class="col-md-3 col-sm-4" [fio]="f"></app-fio>
+        </div>
+
+        <div [ngClass]="{'row': tipo_exibicao_bloco}" *ngIf="lista == 'malha'" class="container-fios row">
+            <app-malha [tipo_exibicao_bloco]="tipo_exibicao_bloco" *ngFor="let f of malhasFiltradas" class="col-md-3 col-sm-4" [malha]="f"></app-malha>
+        </div>
+
+        <div [ngClass]="{'row': tipo_exibicao_bloco}" *ngIf="lista == 'maquina'" class="container-fios row">
+            <app-maquina [tipo_exibicao_bloco]="tipo_exibicao_bloco" *ngFor="let f of maquinasFiltradas" class="col-md-3 col-sm-4" [maquina]="f"></app-maquina>
+        </div>
+
+        <div [ngClass]="{'row': tipo_exibicao_bloco}" *ngIf="lista == 'itens'" class="container-fios row">
+            <app-itens [tipo_exibicao_bloco]="tipo_exibicao_bloco" *ngFor="let f of itensFiltrados" class="col-md-3 col-sm-4" [item]="f"></app-itens>
+        </div>
+    </div>
+
+</div>

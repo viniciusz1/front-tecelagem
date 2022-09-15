@@ -1,0 +1,47 @@
+<div class="centralizar" style="background-color: rgba(0, 0, 0, 0.26); height: 100vh; width: 100vw;">
+
+    <div class="modais">
+        <div (click)="fechaModal()" class="centralizar" style="cursor:pointer;justify-content: end; margin-right: 12px; margin-top: 5px;">
+            X
+        </div>
+        <div class="centralizar">
+            <h2 style="color: #12474E;" >Cadastro de Fios</h2>
+        </div>
+        <div class="centralizar">
+            <div class="linha"></div>
+        </div>
+        <div class="centralizar" style="margin-top: 10px;">
+            <div style="margin-right: 160px;">
+                <h6 >Nome</h6>
+                <div class="centralizar">
+                    <div class="ladoInput">
+                        <div style="margin-left: 15px; margin-top: 4px;">
+                            <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                        </div>
+                    </div>
+
+                    <input [(ngModel)]="nome" class="inputs" type="text">
+                </div>
+            </div>
+        </div>
+
+        <div class="centralizar" style="margin-top: 25px;" >
+            <div style="margin-left: 60px;">
+                <div style="margin-right: 60px;">
+                    <h6>Descrição</h6>
+                    <textarea [(ngModel)]="descricao" class="Desc"></textarea>
+                </div>
+
+            </div>
+        </div>
+        <div class="centralizar" style="margin-top: 20px;">
+            <div>
+                <button (click)="enviarCadastro()" class="nota" style="margin-top: 25px;">
+                    Enviar
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+</div>

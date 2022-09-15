@@ -1,0 +1,8 @@
+.margin-fixed{
+    width: 75px;
+    height: 91vh;
+    min-width: 60px;
+}
+app-home{
+    width: 100%;
+}

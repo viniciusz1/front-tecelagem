@@ -1,0 +1,192 @@
+#divPrincipal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#divSacola {
+    margin-top: 5%;
+    width: 80%;
+}
+
+#tituloSacola {
+    margin-bottom: 2%;
+}
+
+#flexSacola {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.caixaSacola {
+    min-width: 340px;
+    min-height: 200px;
+    border: 0.1px solid rgb(204, 200, 200);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-left: 25px solid #12474E;
+    margin: 10px;
+}
+
+#divFechar {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    padding-top: 20px;
+    padding-right: 15%;
+}
+
+#botaoVender {
+    border: 1px solid rgb(194, 191, 191);
+    border-radius: 6px;
+    background-color: #73C6A8;
+    float: right;
+    color: white;
+    padding: 6px 10px;
+    font-weight: bold;
+}
+
+#valorTotal {
+    float: right;
+    margin-top: 5px;
+    margin-right: 25px;
+    color: #12474E;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.divSuperior {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tituloMalha {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.aumentarDiminuir {
+    width: 35%;
+    height: 30px;
+    display: flex;
+}
+
+.botaoDiminuir {
+    width: 30%;
+    border: 1px solid black;
+    height: 100%;
+    font-size: 26px;
+    text-align: center;
+    padding: 5px;
+}
+
+.botaoDiminuir:hover {
+    cursor: pointer;
+}
+
+.spanQtd {
+    border: 1px solid black;
+    height: 100%;
+    width: 40%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.divInferior {
+    margin: 15px;
+    margin-top: 0;
+    max-width: 285px;
+    height: 60%;
+}
+
+.descricao {
+    font-size: 15px;
+    height: 40%;
+}
+
+.imgLixeira {
+    width: 10%;
+    float: right;
+}
+
+.imgLixeira:hover {
+    cursor: pointer;
+}
+
+.valorMalha {
+    margin-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modalVenda {
+    width: 30%;
+    height: 60%;
+    background-color: white;
+    border: 1px solid #12474E;
+    border-top: 15px solid #12474E;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left: 37%;
+    padding: 15px;
+}
+
+.tituloVenda {
+    color: #12474E;
+    text-align: center;
+    width: 80%;
+}
+
+.fechar {
+    width: 20px;
+    height: 20px;
+}
+
+.fechar:hover {
+    cursor: pointer;
+}
+
+.modalPrincipal {
+    padding: 10px;
+    padding-top: 30px;
+    width: 100%;
+}
+
+.divInput {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.labelInput {
+    color: #12474E;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.inputModal {
+    padding: 0px 10px;
+}
+
+#pesoTotal {
+    width: 20%;
+}
+
+#qualidade {
+    resize: none;
+}
+
+.botaoVenda {
+    padding: 10px;
+    background-color: #12474E;
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    float: right;
+}

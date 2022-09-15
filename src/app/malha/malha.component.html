@@ -1,0 +1,51 @@
+<div class="item" style="cursor: pointer;" *ngIf="tipo_exibicao_bloco" (click)="abrirModal()">
+    <div class="container-top-item">
+        <h1>{{malha.id}}</h1>
+        <span>{{getPreco(malha.valor)}}</span>
+    </div>
+    <div class="container-bottom-item">
+        <span class="spanDescricao">{{malha.descricao}}</span>
+    </div>
+</div>
+<div class=""style="cursor: pointer;" *ngIf="!tipo_exibicao_bloco" (click)="abrirModal()">
+    <ul class="nav p-3" style="border-left: 10px solid #12474E; background-color:#F9F9F9;
+    box-shadow: 1.5px 1.5px 5px 1px #000000;">
+        <li class="me-3">{{malha.id}}</li>
+        <li class="me-3">{{getPreco(malha.valor)}}</li>
+        <li class="me-3">{{malha.descricao}}</li>
+    </ul>
+</div>
+
+<div class="modalVenda" *ngIf="modalVenda">
+    <div style="display: flex; width: 100%; justify-content: space-evenly; align-items: center;">
+        <h2 class="tituloVenda">Saída de Malhas</h2>
+        <img class="fechar" src="../../assets/close.png" (click)="fechaModal()">
+    </div>
+    <div class="modalPrincipal">
+        <div class="divInput">
+            <label for="pesoTotal" class="labelInput">Peso Total:</label>
+            <input type="text" id="pesoTotal" class="inputModal" [(ngModel)]="pesoTotal">
+        </div>
+        <div class="divInput">
+            <label for="qualidade" class="labelInput">Qualidade da Malha:</label>
+            <textarea type="text" id="qualidade" class="inputModal" [(ngModel)]="qualidade"></textarea>
+        </div>
+        <div class="divInput">
+            <label for="cliente" class="labelInput">CNPJ do Cliente:</label>
+            <input type="text" id="cliente" class="inputModal" [(ngModel)]="cliente"/>
+        </div>
+        <div class="divInput">
+            <label for="nota" class="labelInput">Nota Fiscal:</label>
+            <input type="text" id="nota" class="inputModal" [(ngModel)]="nota"/>
+        </div>
+        <div class="aumentarDiminuir">
+            <img (click)="modificaQtd(1)" src="../../assets/menos.png" class="botaoDiminuir"/>
+            <p class="spanQtd">{{quantidade}}</p>
+            <img (click)="modificaQtd(2)" src="../../assets/mais.png" class="botaoDiminuir"/>
+        </div>
+        <div class="botaoSacola">
+            <img src="../../assets/sacolaPreta.png" class="sacola" (click)="adicionaSacola()">
+            <button class="botaoVenda" (click)="vender()">Finalizar Venda</button>
+        </div>
+    </div>
+</div>

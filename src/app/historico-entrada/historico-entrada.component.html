@@ -1,0 +1,64 @@
+<div id="entrada">
+  <header>
+    <h1>Histórico Entrada</h1>
+  </header>
+
+  <br>
+  <h3>Itens</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Item</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Fornecedor</th>
+        <th scope="col">Quantidade</th>
+        <th scope="col">Valor total</th>
+        <th scope="col">Notafiscal</th>
+      </tr>
+    </thead>
+
+    <tbody class="table-group-divider">
+      <tr *ngFor="let item of listaMateriais;let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{ item.itemId }}</td>
+        <td>{{ item.descricao }}</td>
+        <td>{{ item.fornecedorId }}</td>
+        <td>{{ item.quantidade }}</td>
+        <td>{{ item.valorTotalGasto }}</td>
+        <td>{{ item.notaFiscalId }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Fios</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Fio</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">Fornecedor</th>
+        <th scope="col">Peso</th>
+        <th scope="col">Quantidade p/ caixa</th>
+        <th scope="col">Rolos por caixa</th>
+        <th scope="col">Notafiscal</th>
+        <th scope="col">Preco nota fiscal</th>
+      </tr>
+    </thead>
+
+    <tbody class="table-group-divider">
+      <tr *ngFor="let fio of listaFios;let i = index">
+        <th scope="row">{{i + 1}}</th>
+        <td>{{ fio.fioId }}</td>
+        <td>{{ fio.clienteId }}</td>
+        <td>{{ fio.fornecedorId }}</td>
+        <td>{{ fio.peso }}</td>
+        <td>{{ fio.qtdCaixa }}</td>
+        <td>{{ fio.rolosPorCaixa }}</td>
+        <td>{{ fio.notaFiscalId }}</td>
+        <td>{{ fio.precoNotaFiscal }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

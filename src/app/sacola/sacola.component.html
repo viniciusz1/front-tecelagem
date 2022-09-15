@@ -1,0 +1,53 @@
+<div id="divPrincipal">
+    <div id="divSacola">
+        <h2 id="tituloSacola">Minha Sacola</h2>
+        <div id="flexSacola">
+            <div *ngFor="let malha of listaSacola; let i = index" class="caixaSacola">
+                <div class="divSuperior">
+                    <span class="tituloMalha">{{malha.id}}</span>
+                    <div class="aumentarDiminuir">
+                        <img (click)="modificaQtd(1, i)" src="../../assets/menos.png" class="botaoDiminuir"/>
+                        <p class="spanQtd">{{malha.quantidade}}</p>
+                        <img (click)="modificaQtd(2, i)" src="../../assets/mais.png" class="botaoDiminuir"/>
+                    </div>
+                </div>
+                <span class="valorMalha">R$ {{malha.valor}}</span>
+                <div class="divInferior">
+                    <p class="descricao">{{malha.descricao}}</p>
+                    <img (click)="excluirMalha(i)" src="../../assets/lixeira.png" class="imgLixeira">
+                </div>
+            </div>
+            <div style="height: 120px; width: 100%;"></div>
+        </div>
+    </div>
+</div>
+<div id="divFechar">
+    <button id="botaoVender" (click)="abrirModalVenda()">Finalizar Venda</button>
+    <span id="valorTotal">Valor Total: R$ {{valorTotal}}</span>
+</div>
+
+<div class="modalVenda" *ngIf="modalVenda">
+    <div style="display: flex; width: 100%; justify-content: space-evenly; align-items: center;">
+        <h2 class="tituloVenda">Saída de Malhas</h2>
+        <img class="fechar" src="../../assets/close.png" (click)="fechaModal()">
+    </div>
+    <div class="modalPrincipal">
+        <div class="divInput">
+            <label for="pesoTotal" class="labelInput">Peso Total:</label>
+            <input type="text" id="pesoTotal" class="inputModal" [(ngModel)]="pesoTotal">
+        </div>
+        <div class="divInput">
+            <label for="qualidade" class="labelInput">Qualidade da Malha:</label>
+            <textarea type="text" id="qualidade" class="inputModal" [(ngModel)]="qualidade"></textarea>
+        </div>
+        <div class="divInput">
+            <label for="cliente" class="labelInput">CNPJ do Cliente:</label>
+            <input type="text" id="cliente" class="inputModal" [(ngModel)]="cliente"/>
+        </div>
+        <div class="divInput">
+            <label for="nota" class="labelInput">Nota Fiscal:</label>
+            <input type="text" id="nota" class="inputModal" [(ngModel)]="nota"/>
+        </div>
+        <button class="botaoVenda" (click)="vender()">Finalizar Venda</button>
+    </div>
+</div>

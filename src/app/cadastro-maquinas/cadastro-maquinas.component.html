@@ -1,0 +1,174 @@
+<div class="centralizar" style="background-color: rgba(0, 0, 0, 0.26); height: 100vh; width: 100vw;">
+
+        <div class="modais">
+            <div (click)="fechaModal()" class="centralizar" style="cursor:pointer; justify-content: end; margin-right: 12px; margin-top: 5px;">
+                X
+            </div>
+            <div class="centralizar">
+                <h2 style="color: #12474E;">Cadastro de Maquinas</h2>
+            </div>
+            <div class="centralizar">
+                <div class="linha"></div>
+            </div>
+            
+            <div class="centralizar" style="margin-top: 10px; flex-direction: column; ">
+                <div class="centralizar">
+                <div style="margin-right: 50px;">
+                    <h6>Nome</h6>
+                    <div class="centralizar">
+                        <div class="ladoInput">
+                            <div style="margin-left: 15px; margin-top: 4px;">
+                                <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                            </div>
+                        </div>
+
+                        <input [(ngModel)]="nome" class="inputs" type="text">
+                    </div>
+                </div>
+
+                <div>
+                    <h6>Marca</h6>
+
+                    <div class="centralizar">
+                        <div class="ladoInput">
+                            <div style="margin-left: 15px; margin-top: 4px;">
+                                <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                            </div>
+                        </div>
+
+                        <input [(ngModel)]="marca" class="inputs" type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="centralizar">
+                <div style="margin-right: 50px; margin-top: 5px;">
+                    <h6>Ano de fabricação</h6>
+
+                    <div class="centralizar">
+                        <div class="ladoInput">
+                            <div style="margin-left: 15px; margin-top: 4px;">
+                                <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                            </div>
+                        </div>
+
+                        <input [(ngModel)]="anoFabricacao" class="inputs" type="number">
+                    </div>
+                </div>
+
+                <div style="margin-top: 5px;">
+                    <h6>Ano de compra</h6>
+
+                    <div class="centralizar">
+                        <div class="ladoInput">
+                            <div style="margin-left: 15px; margin-top: 4px;">
+                                <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                            </div>
+                        </div>
+
+                        <input [(ngModel)]="anoCompra" class="inputs" type="number">
+                    </div>
+                </div>
+            </div>
+
+            <div class="centralizar">
+                <div style="margin-right: 50px; margin-top: 5px;">
+                    <h6>Quantidade de agulhas</h6>
+
+                    <div class="centralizar">
+                        <div class="ladoInput">
+                            <div style="margin-left: 15px; margin-top: 4px;">
+                                <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                            </div>
+                        </div>
+
+                        <input [(ngModel)]="quantidadeAgulhas" class="inputs" type="number">
+                    </div>
+                </div>
+
+
+                <div style="margin-top: 5px;">
+                    <h6>Quantidade de platinas</h6>
+
+                    <div class="centralizar">
+                        <div class="ladoInput">
+                            <div style="margin-left: 15px; margin-top: 4px;">
+                                <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                            </div>
+                        </div>
+
+                        <input [(ngModel)]="quantidadePlatinas" class="inputs" type="number">
+                    </div>
+                </div>
+            </div>
+            <div class="centralizar">
+                <div style="margin-right: 50px; margin-top: 5px;">
+                    <h6>Quantidade de gaiolas</h6>
+
+                    <div class="centralizar">
+                        <div class="ladoInput">
+                            <div style="margin-left: 15px; margin-top: 4px;">
+                                <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                            </div>
+                        </div>
+
+                        <input [(ngModel)]="quantidadeGaiolas" class="inputs" type="number">
+                    </div>
+                </div>
+
+                <div style="margin-top: 5px;">
+                    <h6>Quantidade de Cones</h6>
+
+                    <div class="centralizar">
+                        <div class="ladoInput">
+                            <div style="margin-left: 15px; margin-top: 4px;">
+                                <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                            </div>
+                        </div>
+
+                        <input [(ngModel)]="quantidadeCones" class="inputs" type="number">
+                    </div>
+                </div>
+            </div>
+            <div class="centralizar">
+                <div style="margin-right: 50px; margin-top: 5px;">
+                    <h6>RPM</h6>
+
+                    <div class="centralizar">
+                        <div class="ladoInput">
+                            <div style="margin-left: 15px; margin-top: 4px;">
+                                <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                            </div>
+                        </div>
+
+                        <input [(ngModel)]="rmp" class="inputs" type="number">
+                    </div>
+                </div>
+
+                <div style="margin-top: 5px;">
+                    <h6>Valor</h6>
+
+                    <div class="centralizar">
+                        <div class="ladoInput">
+                            <div style="margin-left: 15px; margin-top: 4px;">
+                                <i class="bi bi-boxes" style="font-size: 20px;"></i>
+                            </div>
+                        </div>
+
+                        <input [(ngModel)]="valor" class="inputs" type="number">
+                    </div>
+                </div>
+            </div>
+
+            </div>
+
+            <div class="centralizar" style="margin-top: 35px;">
+                <div>
+                    <button (click)="enviarDados()" class="nota" style=" margin-top: 20px;">
+                        Enviar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+</div>

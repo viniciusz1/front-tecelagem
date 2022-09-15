@@ -1,0 +1,20 @@
+
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+.cor-fio{
+    background-color: #73C6A8!important;
+}
+.cor-malha{
+    background-color: #12474E!important;
+}
+.cor-item{
+    background-color: #00b472!important;
+}
+.cor-maquina{
+    background-color: #0d533a!important;
+}

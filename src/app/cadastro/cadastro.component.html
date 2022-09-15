@@ -1,0 +1,49 @@
+<body>
+    <div class="divPrincipal">
+        <div *ngIf="senhaIncorreta == 1" id="modalCadastro">
+            <div class="divInfo">
+                <img id="fechar" (click)="fechar()" src="../../../assets/close.png">
+                <span id="spanCadastro">Senhas não Correspondem</span>
+            </div>
+            <div id="fundo" style="background-color: #AEAEAE;">
+                <div id="vermelho"></div>
+            </div>
+        </div>
+        <div *ngIf="dadosIncorretos == 1" id="modalCadastro">
+            <div class="divInfo">
+                <img id="fechar" (click)="fechar()" src="../../../assets/close.png">
+                <span id="spanCadastro">Preencha todos os campos</span>
+            </div>
+            <div id="fundo" style="background-color: #AEAEAE;">
+                <div id="vermelho"></div>
+            </div>
+        </div>
+        <div id="containerLogin">
+            <h1 id="titulo">
+                Cadastrar
+            </h1>
+            <input type="text" class="inputsCadastro" placeholder="Nome" [(ngModel)]="usuario">
+            <input  *ngIf="tipoTela == false" type="text" class="inputsCadastro" placeholder="CNPJ" [(ngModel)]="cnpj">
+            <input  *ngIf="tipoTela" type="text" class="inputsCadastro" placeholder="CPF" [(ngModel)]="cpf">
+            <input *ngIf="tipoTela" type="date" class="inputsCadastro" placeholder="Data de nascimento"
+                [(ngModel)]="dataNascimento">
+            <input *ngIf="tipoTela" type="number" class="inputsCadastro" placeholder="Salário"
+                [(ngModel)]="salario">
+            <input *ngIf="tipoTela" type="text" class="inputsCadastro" placeholder="Turno" [(ngModel)]="turno">
+            <div class="inputsCadastro" *ngIf="tipoTela">
+                <input  type="password" class="inputsCadastro2" placeholder="Senha" id="inputSenha1"
+                    [(ngModel)]="senhaUser">
+                <img src="../../../assets/olho-fechado.png" class="imgOlho" (click)="trocarOlho(1)" id="olho1">
+            </div>
+            <div class="inputsCadastro" *ngIf="tipoTela">
+                <input type="password" class="inputsCadastro2" placeholder="Confirmar Senha" id="inputSenha2"
+                    [(ngModel)]="repetirSenhaUser">
+                <img src="../../../assets/olho-fechado.png" class="imgOlho" (click)="trocarOlho(2)" id="olho2">
+            </div>
+            <button id="cadastrar" (click)="cadastrar()">
+                Cadastrar
+            </button>
+            <br>
+        </div>
+    </div>
+</body>

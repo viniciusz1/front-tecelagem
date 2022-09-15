@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: #12474E;
+    display: flex;
+    justify-content: center;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+a {
+    color: rgba(0, 0, 0, 0.65);
+    font-family: 'Inter';
+}
+
+label{
+    margin-left: 5px;
+}
+
+.divPrincipal {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+
+.imgLogin {
+    width: 40%;
+}
+
+#containerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30.5%;
+    background-color: #ffffff;
+    border-radius: 16px;
+}
+
+#bemVindo {
+    margin-top: 6%;
+    margin-bottom: 2%;
+    font-weight:normal;
+    font-family: 'Inter';
+    font-size: 14px;
+}
+
+#titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    color: #12474E;
+    font-weight: 500;
+    font-size: 26px;
+    margin-bottom: 5%;
+}
+
+.divCadastro {
+    width: 80%;
+    height: 2.5rem;
+    background-color: #EEEEEE;
+    border: 1px solid transparent;
+    border-left: 6px solid #73C6A8;
+    border-radius: 8px;
+    margin: 2%;
+    box-shadow: 2px 5px 5px rgb(199, 197, 197);
+    display: flex;
+    align-items: center;
+}
+
+.inputsCadastro {
+    border: none;
+    background-color: transparent;
+    color: #555555;
+}
+
+.imgInput {
+    height: 24px;
+    margin: 0px 10px;
+}
+
+#esqueciSenha {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.65);
+    margin-top: 1%;
+    font-family: 'Inter';
+    text-decoration: underline;
+}
+
+#esqueciSenha:hover {
+    cursor: pointer;
+}
+
+#entrarGoogle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 2.5rem;
+    border: solid 0.5px black;
+    border-radius: 5px;
+    margin-top: 5%;
+    font-family: 'Inter';
+    font-size: 15px;
+}
+
+#entrarGoogle:hover {
+    cursor: pointer;
+}
+
+#imgGoogle {
+    height: 1.5rem;
+    margin-right: 10%;
+}
+
+#entrar {
+    width: 35%;
+    height: 2.2rem;
+    background-color: #73C6A8;
+    color: #ffffff;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: 'Inter';
+    box-shadow: 2px 2px 2px rgb(209, 207, 207);
+}
+
+#entrar:hover {
+    cursor: pointer;
+}
+
+#textoConta {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.65);
+    margin: 4%;
+}
+
+.containerSenha {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 80%;
+}
+
+.containerCheckbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    margin: 1%;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.80);
+}
+
+#checkbox{
+    width: 18px;
+    height: 18px;
+}
+
+#checkbox:hover {
+    cursor: pointer;
+}
+
+.botaoCadastro{
+    border: none;
+}
+
+#cadastrar {
+    text-decoration: underline;
+}
+
+#cadastrar:hover {
+    cursor: pointer;
+}
+
+#modalCadastro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 30.5%;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    position: absolute;
+    top: 2%;
+    height: 10%;
+}
+
+.divInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2%;
+    padding-top: 4%;
+}
+
+#spanCadastro {
+    font-family: 'Inter';
+    font-size: 17px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#imgAlerta {
+    width: 8%;
+}
+
+#imgAlerta2 {
+    width: 15%;
+    margin-bottom: 5%;
+}
+
+#fechar {
+    position: absolute;
+    width: 3%;
+    top: 10%;
+    right: 3%;
+}
+
+#fechar:hover {
+    cursor: pointer;
+}
+
+#fundo {
+    width: 100%;
+    height: 10px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+#azul {
+    background-color: #73C6A8;
+    width: 100%;
+    height: 100%;
+    animation-name: animacao;
+    animation-duration: 5s;
+    border-radius: 0px 0px 8px 8px;
+}
+
+#vermelho {
+    background-color: red;
+    width: 100%;
+    height: 100%;
+    animation-name: animacao;
+    animation-duration: 5s;
+    border-radius: 0px 0px 8px 8px;
+}
+
+@keyframes animacao {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+        border-radius: 0px 0px 0px 0px;
+    }
+}
+
+.modalSenha {
+    width: 26%;
+    height: 40%;
+    position: absolute;
+    top: 30%;
+    background-color: #ffffff;
+    filter: drop-shadow(4px 6px 6px rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
+    border-top: 8px solid #12474E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#fechar2 {
+    position: absolute;
+    width: 4%;
+    top: 5%;
+    right: 4%;
+}
+
+#fechar2:hover {
+    cursor: pointer;
+}
+
+#tituloSenha {
+    font-family: 'Inter';
+    font-size: 28px;
+    color: #12474E;
+    font-weight: 800;
+}
+
+#divEmail {
+    width: 80%;
+}
+
+#inserirEmail {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 2%;
+}
+
+#inputEmail {
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 3%;
+    font-size: 16px;
+}
+
+#avisoCadastro {
+    font-size: 16px;
+    font-family: 'Inter';
+    text-align: center;
+    padding: 0% 10%;
+}
+
+.enviarCodigo {
+    background-color: #73C6A8;
+    padding: 2% 6%;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+.enviarCodigo:hover {
+    cursor: pointer;
+}
+
+#inserirCodigo {
+    font-family: 'Inter';
+    font-size: 22px;
+    font-weight: 400;
+}
+
+#divCodigo {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 10%;
+}
+
+.inputCodigo {
+    width: 10%;
+    height: 100%;
+    background-color: #DEDEDE;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding-left: 4%;
+}
+
+#timer {
+    font-family: 'Inter';
+    color: gray;
+    font-size: 16px;
+}
+
+#reenviar {
+    text-decoration: underline;
+    color: rgb(90, 86, 86);
+    font-family: 'Inter';
+    font-size: 14px;
+}
+
+#reenviar:hover {
+    cursor: pointer;
+}
+
+.divInputSenha1 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: end;
+}
+
+.divInputSenha2 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+}
+
+.inputNovaSenha {
+    width: 100%;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 3%;
+    font-family: 'Inter';
+    font-size: 15px;
+}
+
+.spanNovaSenha {
+    font-family: 'Inter';
+    font-size: 16px;
+    margin-bottom: 1%;
+}
+
+.divSenha {
+    border: none;
+    width: 80%;
+    height: 2rem;
+    margin: 2%;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.inputsCadastro2 {
+    width: 90%;
+    border: none;
+    background-color: transparent;
+}
+
+.imgOlho {
+    height: 80%;
+    float: right;
+}
+
+.imgOlho:hover {
+    cursor: pointer;
+}
+
+.divSenha2 {
+    border: 1px solid black;
+    width: 100%;
+    border-radius: 5px;
+    font-family: 'Inter';
+    display: flex;
+    align-items: center;
+    height: 45%;
+    padding: 12px;
+}
+
+.inputNovaSenha {
+    width: 90%;
+    font-family: 'Inter';
+    font-size: 15px;
+    border: none;
+}
+
+.imgOlho2 {
+    height: 20%;
+}
+
+.imgOlho2:hover {
+    cursor: pointer;
+}
+
+.inputSenhaNova {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}

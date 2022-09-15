@@ -1,0 +1,63 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modais {
+    background-color: white;
+    height: 430px;
+    width: 550px;
+    border-radius: 15px;
+}
+
+.linha {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    width: 500px;
+    height: 1px;
+    background-color: black;
+}
+
+.inputs {
+    width: 250px;
+    height: 35px;
+    border: none;
+    box-shadow: 5px 1px 7px 1px rgba(0, 0, 0, 0.479);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    outline: none;
+}
+
+.ladoInput {
+    width: 50px;
+    height: 35px;
+    box-shadow: 2px 1px 7px 1px rgba(0, 0, 0, 0.479);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.quantidade {
+    width: 60px;
+    height: 35px;
+    margin-left: 15px;
+    border: none;
+    box-shadow: 2px 1px 7px 1px rgba(0, 0, 0, 0.479);
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+}
+
+.nota {
+    width: 180px;
+    height: 30px;
+    border: none;
+    background-color: #73C6A8;
+    border-radius: 10px;
+    color: white;
+
+}

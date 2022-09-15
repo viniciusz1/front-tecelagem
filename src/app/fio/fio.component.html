@@ -1,0 +1,16 @@
+<div class="item" *ngIf="tipo_exibicao_bloco">
+    <div class="container-top-item">
+        <h1>{{fio.id}}</h1>
+    </div>
+    <div class="container-bottom-item">
+        <span>{{fio.descricao}}</span>
+    </div>
+</div>
+
+<div class="" *ngIf="!tipo_exibicao_bloco">
+    <ul class="nav p-3" style="border-left: 10px solid #73C6A8; background-color:#F9F9F9;
+    box-shadow: 1.5px 1.5px 5px 1px #000000;">
+        <li class="me-3">{{fio.id}}</li>
+        <li class="me-3">{{fio.descricao}}</li>
+    </ul>
+</div>
