@@ -1,4 +1,5 @@
-<div class="item" *ngIf="tipo_exibicao_bloco">
+<app-detalhes-maquina [maquina]="maquina" (statusModalDetalhes)="fecharDetalhes()" *ngIf="detalhes"></app-detalhes-maquina>
+<div class="item" *ngIf="tipo_exibicao_bloco" (click)="abrirDetalhes()">
     <div class="container-top-item">
         <h1>{{maquina.nome}}</h1>
     </div>
@@ -10,7 +11,7 @@
         <span>{{maquina.rpm}}</span>
     </div>
 </div>
-<div class="" *ngIf="!tipo_exibicao_bloco">
+<div class="" *ngIf="!tipo_exibicao_bloco" (click)="abrirDetalhes()">
     <ul class="nav p-3" style="border-left: 10px solid #0d533a; background-color:#F9F9F9;
     box-shadow: 1.5px 1.5px 5px 1px #000000;">
         <li class="me-3">{{maquina.nome}}</li>

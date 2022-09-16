@@ -1,0 +1,25 @@
+<div id="entrada" class="container mt-5">
+  
+    <br>
+    <h1>Seus Clientes</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Id</th>
+          <th scope="col">CNPJ</th>
+        </tr>
+      </thead>
+  
+      <tbody class="table-group-divider">
+        <tr *ngFor="let item of listaClientes;let i = index">
+          <th scope="row">{{i + 1}}</th>
+          <td>{{ item.nome }}</td>
+          <td>{{ item.id }}</td>
+          <td>{{ item.cnpj }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+  </div>

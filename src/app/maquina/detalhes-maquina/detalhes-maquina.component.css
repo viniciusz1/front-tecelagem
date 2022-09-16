@@ -20,9 +20,25 @@ p{
     padding: 30px;
     position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     width: 60%;
     height: 60%;
     background-color: wheat;
     opacity: 1;
+}
+
+.divDireita {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-height: 300px;
+}
+
+.inputProducao {
+    padding-left: 10px;
+    padding: 5px;
 }

@@ -13,6 +13,10 @@
     overflow: hidden;
 }
 
+.item:hover {
+    cursor: pointer;
+}
+
 .container-top-item{
     display: flex;
     justify-content: space-between;

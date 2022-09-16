@@ -15,7 +15,7 @@
         <div class="centralizar">
             <div style="margin-right: 60px;">
                 <h6 *ngIf="this.tipo == 1">Produto</h6>
-                <h6 *ngIf="this.tipo == 2">Cliente</h6>
+                <h6 *ngIf="this.tipo == 2">CPF Do cliente</h6>
                 <div class="centralizar">
                     <div class="ladoInput">
                         <div style="margin-left: 15px; margin-top: 4px;">
@@ -94,16 +94,16 @@
         <div class="centralizar" style="margin-top: 20px;">
             <div>
                 <div class="centralizar">
-                    <h6>Nota Fiscal</h6>
+                    <h6>Fio</h6>
                 </div>
 
-                <input class="notaFiscal" [(ngModel)]="notaFiscal">
+                <input class="notaFiscal" [(ngModel)]="fio">
             </div>
             <div>
                 <button class="nota" style="margin-left: 100px; margin-top: 25px;" (click)="entradaItens()">
                     Enviar
                 </button>
-            </div>
+            
         </div>
     </div>
 

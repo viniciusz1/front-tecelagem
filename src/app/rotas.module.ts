@@ -17,6 +17,7 @@ import { HistoricoEntradaComponent } from './historico-entrada/historico-entrada
 import { HistoricoProducaoComponent } from './historico-producao/historico-producao.component';
 import { SacolaComponent } from './sacola/sacola.component';
 import { cadastroMaquinasComponent } from './cadastro-maquinas/cadastro-maquinas.component';
+import { ClientesComponent } from './clientes/clientes.component';
 
 
 
@@ -41,6 +42,7 @@ import { cadastroMaquinasComponent } from './cadastro-maquinas/cadastro-maquinas
         path: 'entrada',
         component: EntradaComponent
       },
+      
       {
         path: 'cadastroItem',
         component: cadastroItemComponent
@@ -53,6 +55,10 @@ import { cadastroMaquinasComponent } from './cadastro-maquinas/cadastro-maquinas
             path: 'tela-inicial',
             component: HomeComponent,
             canActivate: []
+          },
+          {
+            path: 'clientes',
+            component: ClientesComponent
           },
           {
             path: 'maquina',

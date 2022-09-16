@@ -14,7 +14,7 @@ export class EntradaComponent implements OnInit {
   constructor(
     private itemsService: ItensService,
     private entradaFioService: EntradaFioService
-    ) {}
+  ) { }
   fecharModal() {
     this.changeModal.emit();
   }
@@ -26,8 +26,8 @@ export class EntradaComponent implements OnInit {
   descricao = '';
   rolosCaixa = 0;
   nome = "";
-
-  notaFiscal = "";
+  fio = "";
+  preco = 0;
 
   //Inserir um novo item
   //Inserir a entrada_item
@@ -37,26 +37,33 @@ export class EntradaComponent implements OnInit {
 
   entradaItens() {
     if (this.tipo == 1) {
-      console.log(this.itemsService.cadastrarItem({
+      this.itemsService.cadastrarItem({
+        nome: this.nome,
         quantidade: this.quantidade,
         tipo: this.nome
-      }));
-    } else if(this.tipo == 2){
-      this.entradaFioService.cadastrarEntradaFio({
+      }).subscribe({next: (e) => {
+        console.log(e)
+      }});
+    } else if (this.tipo == 2) {
+      this.preco = this.valor * this.rolosCaixa * this.quantidade
+      let entradaItem = {
         clienteId: this.nome,
-        quantidade: this.quantidade,
-        valor: this.valor,
         fornecedorId: this.fornecedor,
-        notaFiscalId: this.notaFiscal,
         qtdCaixa: this.quantidade,
-        rolosPorCaixa: this.rolosCaixa
+        rolosPorCaixa: this.rolosCaixa,
+        fioId: this.fio,
+        peso: this.peso
+      }
+      
+      this.entradaFioService.cadastrarEntradaFio(entradaItem).subscribe(e => {
+        console.log(e)
       })
     }
   }
 
   mudarQtd(opcao: number) {
-    if(opcao == 1) {
-      if(this.quantidade > 1) {
+    if (opcao == 1) {
+      if (this.quantidade > 1) {
         this.quantidade--;
       }
     } else {
@@ -65,8 +72,8 @@ export class EntradaComponent implements OnInit {
   }
 
   mudarValor(opcao: number) {
-    if(opcao == 1) {
-      if(this.valor > 1) {
+    if (opcao == 1) {
+      if (this.valor > 1) {
         this.valor--;
       }
     } else {
@@ -75,8 +82,8 @@ export class EntradaComponent implements OnInit {
   }
 
   mudarRolos(opcao: number) {
-    if(opcao == 1) {
-      if(this.rolosCaixa > 1) {
+    if (opcao == 1) {
+      if (this.rolosCaixa > 1) {
         this.rolosCaixa--;
       }
     } else {
@@ -84,5 +91,5 @@ export class EntradaComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

@@ -46,6 +46,7 @@ import { ProducaoService } from './service/producao.service';
 import { SaidaMalhaService } from './service/saidaMalha.service';
 import { UsuariosService } from './service/usuario.service';
 import { ClienteService } from './service/cliente.service';
+import { ClientesComponent } from './clientes/clientes.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import { ClienteService } from './service/cliente.service';
     cadastroItemComponent,
     CadastroMalhaComponent,
     cadastroMaquinasComponent,
-    
+    ClientesComponent
     
   ],
   imports: [

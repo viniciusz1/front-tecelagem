@@ -1,18 +1,25 @@
 <div class="fundo">
     <div class="alinhar">
         <div class="bloco">
-            <i class="bi bi-x-lg position-absolute" style="right: 20px; top: 15px;" (click)="close()"></i>
-            <p>Nome: Máquina De Tecelar</p>
-            <p>Marca: Tesla</p>
-            <p>Fabricada em: Máquina De Tecelar</p>
-            <p>Comprada em: Máquina De Tecelar</p>
-            <p>Valor: Máquina De Tecelar</p>
-            <p>Agulhas: Máquina De Tecelar</p>
-            <p>Platina: Máquina De Tecelar</p>
-            <p>Gaiola: Máquina De Tecelar</p>
-            <p>Malhas: Máquina De Tecelar</p>
-            <p style="display: flex;justify-content: space-between;">
-                Itens: Máquina De Tecelar <button class="btn btn-primary">Iniciar Produção</button></p>
+            <div class="divEsquerda">
+                <i class="bi bi-x-lg position-absolute" style="right: 20px; top: 15px;" (click)="close()"></i>
+                <p>Nome: {{maquina.nome}}</p>
+                <p>Marca: {{maquina.marca}}</p>
+                <p>Fabricada em: {{maquina.ano_fabricacao}}</p>
+                <p>Comprada em: {{maquina.ano_compra}}</p>
+                <p>Valor: {{maquina.valor_compra}}</p>
+                <p>RPM: {{maquina.rpm}}</p>
+                <p>Agulhas: {{maquina.qtd_agulha}}</p>
+                <p>Platinas: {{maquina.qtd_platina}}</p>
+                <p>Gaiolas: {{maquina.qtd_gaiolas}}</p>
+                <p>Cones: {{maquina.qtd_cones}}</p>
+            </div>
+            <div class="divDireita">
+                <input class="inputProducao" type="text" placeholder="Peso do Rolo" [(ngModel)]="peso">
+                <input class="inputProducao" type="text" placeholder="Defeito" [(ngModel)]="defeito">
+                <input class="inputProducao" type="text" placeholder="CNPJ do Cliente" [(ngModel)]="cliente">
+                <button class="btn btn-primary" (click)="cadastrarProducao()">Iniciar Produção</button>
+            </div>
         </div>
     </div>
 </div>

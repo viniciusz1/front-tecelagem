@@ -70,7 +70,7 @@ export class MalhaComponent implements OnInit {
           }
 
           try {
-            this.malhaService.cadastrarSaidaMalha({qtd_rolos: this.quantidade, peso_total: this.pesoTotal, qualidade_malha: this.qualidade, valor_saida: (this.quantidade * this.malha.valor), cliente_codigo: clienteID, nota_fiscal_codigo: this.nota, malha_codigo: this.malha.id});
+            this.malhaService.cadastrarSaidaMalha({qtd_rolos: this.quantidade, peso_total: this.pesoTotal, qualidade_malha: this.qualidade, valor_saida: (this.quantidade * this.malha.valor), cliente_codigo: clienteID, nota_fiscal_codigo: this.nota, malha_codigo: this.malha.id}).subscribe();
           } catch (erro) {
             alert("Erro interno no Sistema!");
             return;

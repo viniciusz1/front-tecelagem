@@ -107,7 +107,7 @@ export class SacolaComponent implements OnInit {
 
           try {
             for (const malha of this.listaSacola) {
-              this.malhaService.cadastrarSaidaMalha({qtd_rolos: malha.quantidade, peso_total: this.pesoTotal, qualidade_malha: this.qualidade, valor_saida: (malha.quantidade * malha.valor), cliente_codigo: clienteID, nota_fiscal_codigo: this.nota, malha_codigo: malha.id}); 
+              this.malhaService.cadastrarSaidaMalha({qtd_rolos: malha.quantidade, peso_total: this.pesoTotal, qualidade_malha: this.qualidade, valor_saida: (malha.quantidade * malha.valor), cliente_codigo: clienteID, nota_fiscal_codigo: this.nota, malha_codigo: malha.id}).subscribe(); 
             }
           } catch (erro) {
             alert("Erro interno no Sistema!");

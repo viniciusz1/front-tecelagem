@@ -39,10 +39,16 @@ export const navbarData = [
         icon: "bi bi-people-fill",
         label: "Cadastro de Clientes"
     },
+    
     {
         routeLink: '/home/cadastro/funcionario',
         icon: "bi bi-person-badge",
         label: "Cadastro de Funcionário"
+    },
+    {
+        routeLink: '/home/clientes',
+        icon: "bi bi-person-lines-fill",
+        label: "Listar Clientes"
     },
     {
         routeLink: '',

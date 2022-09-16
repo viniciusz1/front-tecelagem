@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Observable } from 'rxjs';
+interface Cliente {
+  nome: string
+  cnpj: string
+  id: string
+}
 @Injectable({
   providedIn: 'root'
 })
+
 export class ClienteService {
 
   constructor(private http: HttpClient) {}
@@ -12,9 +18,9 @@ export class ClienteService {
     return this.http.post('https://tecelagem-back-end.vercel.app/api/cliente', body);
   }
 
-  buscarClientes(){
+  buscarClientes(): Observable<Cliente[]>{
 
-    return this.http.get('https://tecelagem-back-end.vercel.app/api/cliente');
+    return this.http.get<Cliente[]>('https://tecelagem-back-end.vercel.app/api/cliente');
   }
 
   buscarCliente(id: String){
