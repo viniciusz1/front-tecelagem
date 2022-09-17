@@ -16,7 +16,8 @@ export class MaquinaComponent implements OnInit {
   ngOnInit(): void {
   }
   remove(){
-    this.maquinasService.removerMaquinas(this.maquina.id)
+    console.log(this.maquina.id)
+    this.maquinasService.deletarMaquina(this.maquina.id)
     .subscribe({next: e => {
       location.reload()
     }})

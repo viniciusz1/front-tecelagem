@@ -16,7 +16,7 @@ export class MalhaService {
   buscarMalhas(){
     return this.http.get('https://tecelagem-back-end.vercel.app/api/malha');
   }
-  removerMalhas(id:number){
+  removerMalhas(id:string){
     return this.http.delete(`https://tecelagem-back-end.vercel.app/api/malha/${id}`);
   }
 

@@ -6,6 +6,10 @@
     <div class="container-bottom-item">
         <span class="spanDescricao">{{malha.descricao}}</span>
     </div>
+    <div>
+        <button class="btn btn-primary me-2 px-3" (click)="abrirModal()">Cadastrar Saída</button>
+        <i style="cursor: pointer;" (click)="remove()" class="bi bi-trash"></i>
+    </div>
 </div>
 <div class="" style="cursor: pointer;" *ngIf="!tipo_exibicao_bloco">
     <ul class="nav p-3" style="border-left: 10px solid #12474E; background-color:#F9F9F9;

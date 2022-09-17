@@ -11,6 +11,10 @@
         <span>{{maquina.ano_fabricacao}}</span>
         <span>{{maquina.rpm}}</span>
     </div>
+    <div>
+        <button class="btn btn-primary me-2 px-3" (click)="abrirDetalhes()">Iniciar Produção</button>
+        <i style="cursor: pointer;" (click)="remove()" class="bi bi-trash"></i>
+    </div>
 </div>
 <div class="" *ngIf="!tipo_exibicao_bloco">
     <ul class="nav p-3" style="border-left: 10px solid #0d533a; background-color:#F9F9F9;

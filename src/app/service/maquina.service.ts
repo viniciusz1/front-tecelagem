@@ -11,9 +11,7 @@ export class MaquinaService {
   cadastrarMaquina(body: {}) {
     return this.http.post('https://tecelagem-back-end.vercel.app/api/maquina', body);
   }
-  removerMaquinas(id:number){
-    return this.http.delete(`https://tecelagem-back-end.vercel.app/api/maquina/${id}`);
-  }
+  
   buscarMaquinas(){
     return this.http.get('https://tecelagem-back-end.vercel.app/api/maquina');
   }
@@ -26,7 +24,7 @@ export class MaquinaService {
     return this.http.put(`https://tecelagem-back-end.vercel.app/api/maquina/${id}`, body);
   }
 
-  deletarMaquina(id: String){
+  deletarMaquina(id: number){
     return this.http.delete(`https://tecelagem-back-end.vercel.app/api/maquina/${id}`);
   }
 }

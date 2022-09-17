@@ -25,7 +25,7 @@ export class MalhaComponent implements OnInit {
   sacola = [{ id: "0", descricao: "a", valor: 3 }]
   remove(){
 
-    this.mService.removerMalhas(parseInt(this.malha.id))
+    this.mService.removerMalhas(this.malha.id)
     .subscribe({next: e => {
       location.reload()
     }})
