@@ -7,12 +7,18 @@
         <span class="spanDescricao">{{malha.descricao}}</span>
     </div>
 </div>
-<div class=""style="cursor: pointer;" *ngIf="!tipo_exibicao_bloco" (click)="abrirModal()">
+<div class="" style="cursor: pointer;" *ngIf="!tipo_exibicao_bloco">
     <ul class="nav p-3" style="border-left: 10px solid #12474E; background-color:#F9F9F9;
-    box-shadow: 1.5px 1.5px 5px 1px #000000;">
-        <li class="me-3">{{malha.id}}</li>
-        <li class="me-3">{{getPreco(malha.valor)}}</li>
-        <li class="me-3">{{malha.descricao}}</li>
+    box-shadow: 1.5px 1.5px 5px 1px #000000; justify-content: space-between">
+        <div class="d-flex">
+            <li class="me-3">{{malha.id}}</li>
+            <li class="me-3">{{getPreco(malha.valor)}}</li>
+            <li class="me-3">{{malha.descricao}}</li>
+        </div>
+        <div>
+            <button class="btn btn-primary me-2 px-3" (click)="abrirModal()">Cadastrar Saída</button>
+            <i style="cursor: pointer;" (click)="remove()" class="bi bi-trash"></i>
+        </div>
     </ul>
 </div>
 
@@ -32,16 +38,16 @@
         </div>
         <div class="divInput">
             <label for="cliente" class="labelInput">CNPJ do Cliente:</label>
-            <input type="text" id="cliente" class="inputModal" [(ngModel)]="cliente"/>
+            <input type="text" id="cliente" class="inputModal" [(ngModel)]="cliente" />
         </div>
         <div class="divInput">
             <label for="nota" class="labelInput">Nota Fiscal:</label>
-            <input type="text" id="nota" class="inputModal" [(ngModel)]="nota"/>
+            <input type="text" id="nota" class="inputModal" [(ngModel)]="nota" />
         </div>
         <div class="aumentarDiminuir">
-            <img (click)="modificaQtd(1)" src="../../assets/menos.png" class="botaoDiminuir"/>
+            <img (click)="modificaQtd(1)" src="../../assets/menos.png" class="botaoDiminuir" />
             <p class="spanQtd">{{quantidade}}</p>
-            <img (click)="modificaQtd(2)" src="../../assets/mais.png" class="botaoDiminuir"/>
+            <img (click)="modificaQtd(2)" src="../../assets/mais.png" class="botaoDiminuir" />
         </div>
         <div class="botaoSacola">
             <img src="../../assets/sacolaPreta.png" class="sacola" (click)="adicionaSacola()">

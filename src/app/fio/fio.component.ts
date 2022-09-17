@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { FioService } from '../service/fio.service';
 
 @Component({
   selector: 'app-fio',
@@ -9,8 +10,14 @@ export class FioComponent implements OnInit {
 
   @Input() fio = {id: 0, descricao: ""}
   @Input() tipo_exibicao_bloco = true;
-  constructor() { }
+  constructor(private fioService: FioService) { }
+  remove(){
 
+    this.fioService.removerFios(this.fio.id)
+    .subscribe({next: e => {
+      location.reload()
+    }})
+  } 
   ngOnInit(): void {
   }
 

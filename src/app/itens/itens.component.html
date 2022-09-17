@@ -11,9 +11,12 @@
 </div>
 <div class="" *ngIf="!tipo_exibicao_bloco">
     <ul class="nav p-3" style="border-left: 10px solid #00b472; background-color:#F9F9F9;
-    box-shadow: 1.5px 1.5px 5px 1px #000000;">
-        <li class="me-3">{{item.id}}</li>
-        <li class="me-3">{{item.tipo}}</li>
-        <li class="me-3">{{item.quantidade}}</li>
+    box-shadow: 1.5px 1.5px 5px 1px #000000; justify-content: space-between">
+        <div class="d-flex">
+            <li class="me-3">{{item.id}}</li>
+            <li class="me-3">{{item.tipo}}</li>
+            <li class="me-3">{{item.quantidade}}</li>
+        </div>
+        <i style="cursor: pointer;" (click)="remove()" class="bi bi-trash"></i>
     </ul>
 </div>

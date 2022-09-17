@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ClienteService } from '../service/cliente.service';
+import { MalhaService } from '../service/malha.service';
 import { SaidaMalhaService } from '../service/saidaMalha.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class MalhaComponent implements OnInit {
 
   @Input() malha = { id: "0", descricao: "", valor: 0 };
 
-  constructor(private clienteService : ClienteService, private malhaService : SaidaMalhaService) { }
+  constructor(private clienteService : ClienteService, private malhaService : SaidaMalhaService, private mService: MalhaService) { }
 
   @Input() tipo_exibicao_bloco = true;
   modalVenda = false;
@@ -22,7 +23,13 @@ export class MalhaComponent implements OnInit {
   quantidade = 1;
 
   sacola = [{ id: "0", descricao: "a", valor: 3 }]
+  remove(){
 
+    this.mService.removerMalhas(parseInt(this.malha.id))
+    .subscribe({next: e => {
+      location.reload()
+    }})
+  }
   ngOnInit(): void {
   }
 

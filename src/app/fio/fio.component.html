@@ -5,12 +5,16 @@
     <div class="container-bottom-item">
         <span>{{fio.descricao}}</span>
     </div>
+    <i style="cursor: pointer;" (click)="remove()" class="bi bi-trash"></i>
 </div>
 
 <div class="" *ngIf="!tipo_exibicao_bloco">
     <ul class="nav p-3" style="border-left: 10px solid #73C6A8; background-color:#F9F9F9;
-    box-shadow: 1.5px 1.5px 5px 1px #000000;">
-        <li class="me-3">{{fio.id}}</li>
-        <li class="me-3">{{fio.descricao}}</li>
+    box-shadow: 1.5px 1.5px 5px 1px #000000; justify-content: space-between;">
+        <div class="d-flex">
+            <li class="me-3">{{fio.id}}</li>
+            <li class="me-3">{{fio.descricao}}</li>
+        </div>
+        <i style="cursor: pointer;" (click)="remove()" class="bi bi-trash"></i>
     </ul>
 </div>

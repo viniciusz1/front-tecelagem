@@ -25,7 +25,7 @@ export class ItensService {
     return this.http.put(`https://tecelagem-back-end.vercel.app/api/item/${id}`, body);
   }
 
-  deletarItem(id: String){
+  deletarItem(id: number){
     return this.http.delete(`https://tecelagem-back-end.vercel.app/api/item/${id}`);
   }
 

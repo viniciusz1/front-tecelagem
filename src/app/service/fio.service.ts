@@ -15,6 +15,10 @@ export class FioService {
     buscarFios() {
         return this.http.get('https://tecelagem-back-end.vercel.app/api/fio');
     }
+    removerFios(id: number) {
+        return this.http.delete(`https://tecelagem-back-end.vercel.app/api/fio/${id}`);
+    }
+
 
     buscarFioId(id: string) {
         return this.http.get(`https://tecelagem-back-end.vercel.app/api/fio/${id}`);
