@@ -23,7 +23,9 @@ p{
     justify-content: space-between;
     width: 60%;
     height: 60%;
-    background-color: wheat;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 12px;
     opacity: 1;
 }
 
@@ -41,4 +43,17 @@ p{
 .inputProducao {
     padding-left: 10px;
     padding: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.fecharModal {
+    right: 20px;
+    top: 15px;
+}
+
+.fecharModal:hover {
+    cursor: pointer;
 }
