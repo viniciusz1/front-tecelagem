@@ -36,28 +36,23 @@ export class EntradaComponent implements OnInit {
   //Cadastrar nota fiscal
 
   entradaItens() {
-    if (this.tipo == 1) {
-      this.itemsService.cadastrarItem({
-        nome: this.nome,
-        quantidade: this.quantidade,
-        tipo: this.nome
-      }).subscribe({next: (e) => {
+    if (this.tipo == 2) {
+      this.entradaFioService.cadastrarEntradaFio(
+        {
+            clienteId: this.nome,
+            fornecedorId: this.fornecedor,
+            qtdCaixa: this.quantidade,
+            rolosPorCaixa: this.rolosCaixa,
+            fioId: this.fio,
+            peso: this.peso
+          }
+      ).subscribe({next: (e) => {
         console.log(e)
       }});
-    } else if (this.tipo == 2) {
-      this.preco = this.valor * this.rolosCaixa * this.quantidade
-      let entradaItem = {
-        clienteId: this.nome,
-        fornecedorId: this.fornecedor,
-        qtdCaixa: this.quantidade,
-        rolosPorCaixa: this.rolosCaixa,
-        fioId: this.fio,
-        peso: this.peso
-      }
-      
-      this.entradaFioService.cadastrarEntradaFio(entradaItem).subscribe(e => {
-        console.log(e)
-      })
+      alert("Fio cadastrado com sucesso! :)")
+    } else if (this.tipo == 1) {
+  
+      alert("Entrada de item realizada com sucesso!");
     }
   }
 

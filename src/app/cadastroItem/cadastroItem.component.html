@@ -14,7 +14,6 @@
         <div class="centralizar" style="margin-top: 10px;">
             <div style="margin-right: 160px;">
                 <h6>Nome</h6>
-
                 <div class="centralizar">
                     <div class="ladoInput">
                         <div style="margin-left: 15px; margin-top: 4px;">
@@ -22,7 +21,7 @@
                         </div>
                     </div>
 
-                    <input class="inputs" type="text">
+                    <input class="inputs" type="text"  [(ngModel)]="nomeItem">
                 </div>
             </div>
         </div>
@@ -38,14 +37,14 @@
                         </div>
                     </div>
 
-                    <input class="inputs" type="text">
+                    <input class="inputs" type="text" [(ngModel)]="tipoItem">
                 </div>
             </div>
             <div>
                 <h6 style="margin-left: 40px;">Quantidade</h6>
                 <div class="centralizar">
                     <h3 style="margin-left: 20px;">+</h3>
-                    <input class="quantidade" placeholder="" type="text">
+                    <input class="quantidade" placeholder="" type="text" [(ngModel)]="quantidade">
                     <h3 style="margin-left: 20px; font-size: 35px;">-</h3>
                 </div>
             </div>
@@ -54,7 +53,7 @@
 
         <div class="centralizar" style="margin-top: 50px;">
             <div>
-                <button class="nota" style=" margin-top: 25px;">
+                <button class="nota" style=" margin-top: 25px;" (click)="cadastrarItem()">
                     Enviar
                 </button>
             </div>

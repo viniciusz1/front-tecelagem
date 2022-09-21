@@ -22,6 +22,7 @@ export class CadastroFioComponent implements OnInit {
     .subscribe(e =>{
       console.log(e)
     })
+    alert("Fio cadastrado com sucesso!");
   }
 
   ngOnInit(): void {
