@@ -8,7 +8,7 @@ import { MaquinaService } from '../service/maquina.service';
 })
 export class MaquinaComponent implements OnInit {
 
-  @Input() maquina = {id: 0, nome: "", marca: "", ano_fabricacao: "", ano_compra: "", valor_compra: 0, rpm: 0, qtd_agulha: 0, qtd_platina: 0, qtd_gaiolas: 0, qtd_cones: 0}
+  @Input() maquina = {id: 0, nome: "", marca: "", anoFabricacao: "", anoCompra: "", valorCompra: 0, rpm: 0, qtdAgulha: 0, qtdPlatina: 0, qtdGaiolas: 0, qtdCones: 0}
   @Input() tipo_exibicao_bloco = true;
   detalhes = false;
   constructor(private maquinasService: MaquinaService) { }

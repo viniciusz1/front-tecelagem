@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
 
   maquina = [
     {
-      id: 0, nome: "", marca: "", ano_fabricacao: "", ano_compra: "", valor_compra: 0, rpm: 0, qtd_agulha: 0, qtd_platina: 0, qtd_gaiolas: 0, qtd_cones: 0
+      id: 0, nome: "", marca: "", anoFabricacao: "", anoCompra: "", valorCompra: 0, rpm: 0, qtdAgulha: 0, qtdPlatina: 0, qtdGaiolas: 0, qtdCones: 0
     }
   ]
 
@@ -67,7 +67,7 @@ export class HomeComponent implements OnInit {
 
   maquinasFiltradas = [
     {
-      id: 0, nome: "", marca: "", ano_fabricacao: "", ano_compra: "", valor_compra: 0, rpm: 0, qtd_agulha: 0, qtd_platina: 0, qtd_gaiolas: 0, qtd_cones: 0
+      id: 0, nome: "", marca: "", anoFabricacao: "", anoCompra: "", valorCompra: 0, rpm: 0, qtdAgulha: 0, qtdPlatina: 0, qtdGaiolas: 0, qtdCones: 0
     }
   ];
 

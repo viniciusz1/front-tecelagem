@@ -5,14 +5,14 @@
                 <i class="bi bi-x-lg position-absolute" style="right: 20px; top: 15px;" (click)="close()"></i>
                 <p>Nome: {{maquina.nome}}</p>
                 <p>Marca: {{maquina.marca}}</p>
-                <p>Fabricada em: {{maquina.ano_fabricacao}}</p>
-                <p>Comprada em: {{maquina.ano_compra}}</p>
-                <p>Valor: {{maquina.valor_compra}}</p>
+                <p>Fabricada em: {{maquina.anoFabricacao}}</p>
+                <p>Comprada em: {{maquina.anoCompra}}</p>
+                <p>Valor: {{maquina.valorCompra}}</p>
                 <p>RPM: {{maquina.rpm}}</p>
-                <p>Agulhas: {{maquina.qtd_agulha}}</p>
-                <p>Platinas: {{maquina.qtd_platina}}</p>
-                <p>Gaiolas: {{maquina.qtd_gaiolas}}</p>
-                <p>Cones: {{maquina.qtd_cones}}</p>
+                <p>Agulhas: {{maquina.qtdAgulha}}</p>
+                <p>Platinas: {{maquina.qtdPlatina}}</p>
+                <p>Gaiolas: {{maquina.qtdGaiolas}}</p>
+                <p>Cones: {{maquina.qtdCones}}</p>
             </div>
             <div class="divDireita">
                 <input class="inputProducao" type="text" placeholder="Peso do Rolo" [(ngModel)]="peso">
